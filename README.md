@@ -1,7 +1,5 @@
 # JHipster generated MeetUp App built while participating to Cegeka's Java Academy in 2019
 
-# academyProject
-
 This application was generated using JHipster 6.1.2, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v6.1.2](https://www.jhipster.tech/documentation-archive/v6.1.2).
 
 ## Development
