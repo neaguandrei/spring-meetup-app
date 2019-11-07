@@ -1,8 +1,11 @@
 # JHipster generated MeetUp App built while participating to Cegeka's Java Academy in 2019
 
-This application was generated using JHipster 6.1.2, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v6.1.2](https://www.jhipster.tech/documentation-archive/v6.1.2).
+The project was created by the whole academy participants, a number of 15 trainees, my involvement was only on a few modules from the back end. The front end was created by one of the trainers.
+
 
 ## Development
+
+This application was generated using JHipster 6.1.2, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v6.1.2](https://www.jhipster.tech/documentation-archive/v6.1.2).
 
 Before you can build this project, you must install and configure the following dependencies on your machine:
 
