@@ -1,0 +1,96 @@
+<div id="myProfile">
+    <div class="container-fluid">
+        <div class="row myProfile__userInfo">
+            <div class="col-md-12">
+                <div align="center">
+                    <img src="../../../../content/images/user.svg" alt="Avatar" class="avatar">
+                </div>
+                <h1 class="myProfile__userInfo" align="center">FirstName LastName</h1>
+                <p class="lead subtitle" align="center">****</p>
+                <div align="center">
+                    <button class="btn btn-primary" [routerLink]="['../edit']">
+                        Edit
+                        <fa-icon icon="pen-fancy"></fa-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row flex-row justify-content-center">
+                <div class="col-md-4">
+                    <div class="card myProfile__basicInfo border-info mb-3">
+                        <fieldset>
+                            <legend class="legend-padding">
+                                Your basic info
+                            </legend>
+                            <div class="form-group">
+                                <label>First name</label>
+                                <input readonly type="text" class="form-control form-styling" id="firstNameInput">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastNameInput">Last name</label>
+                                <input readonly type="text" class="form-control form-styling" id="lastNameInput">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="ageInput">Age</label>
+                                <input readonly type="number" class="form-control form-styling" id="ageInput">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <input readonly type="number" class="form-control form-styling" id="gender"/>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card myProfile__basicInfo border-success mb-3">
+                        <legend class="legend-padding">
+                            Things you like
+                        </legend>
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Thing you like 1
+                                <span class="badge badge-primary badge-pill">1</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Thing you like 2
+                                <span class="badge badge-primary badge-pill">2</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Thing you like 3
+                                <span class="badge badge-primary badge-pill">3</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card myProfile__basicInfo border-dark mb-3">
+                        <legend class="legend-padding">
+                            Recent activity
+                        </legend>
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Recent activity 1
+                                <span class="badge badge-primary badge-success">1</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Recent activity 2
+                                <span class="badge badge-primary badge-warning">2</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Recent activity 3
+                                <span class="badge badge-primary badge-warning">3</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

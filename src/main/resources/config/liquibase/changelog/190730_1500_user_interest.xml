@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="autoIncrement" value="true"/>
+
+    <!--
+        JHipster core tables.
+        The initial schema has the '00000000000001' id, so that it is over-written if we re-generate it.
+    -->
+    <changeSet id="190730150001" author="jhipster">
+        <createTable tableName="user_interest">
+            <column name="user_id" type="bigint"/>
+            <column name="interest_id" type="bigint"/>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="user_interest" baseColumnNames="user_id" constraintName="userFK" referencedTableName="jhi_user"
+                                 referencedColumnNames="id"/>
+        <addForeignKeyConstraint baseTableName="user_interest" baseColumnNames="interest_id" constraintName="interestFK" referencedTableName="interest"
+                                 referencedColumnNames="id"/>
+    </changeSet>
+
+</databaseChangeLog>

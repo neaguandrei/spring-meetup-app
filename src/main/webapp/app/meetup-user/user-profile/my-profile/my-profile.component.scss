@@ -1,0 +1,22 @@
+#myProfile{
+  background: url('../../../../content/images/meetup3.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  height: 120vh;
+}
+.avatar {
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+}
+
+.myProfile__userInfo{
+  padding: 20px;
+}
+
+.myProfile__basicInfo{
+  padding: 10px;
+  height: 90%;
+  overflow: scroll;
+}

@@ -1,0 +1,76 @@
+<div class="card jh-card">
+
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+                    <legend class="legend-padding">
+                        Let us know some basic info about you
+                    </legend>
+                    <div class="form-group">
+                        <label>First name</label>
+                        <input type="text" class="form-control form-styling" id="firstNameInput"
+                               placeholder="Enter first name">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastNameInput">Last name</label>
+                        <input type="text" class="form-control form-styling" id="lastNameInput"
+                               placeholder="Enter last name">
+                    </div>
+                    <div class="form-group">
+                        <label for="ageInput">Age</label>
+                        <input type="number" class="form-control form-styling" id="ageInput"
+                               placeholder="Enter your age">
+                    </div>
+                    <div class="form-group">
+                        <label for="genderSelect">Gender</label>
+                        <select class="custom-select form-styling" id="genderSelect">
+                            <option selected="">Select your gender</option>
+                            <option value="1">Female</option>
+                            <option value="2">Male</option>
+                        </select>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="col-md-6">
+
+            <legend>Things you like</legend>
+
+            <div class="list-group margin-40">
+                <p class="list-group-item list-group-item-action">
+                    Option 1
+                </p>
+                <p class="list-group-item list-group-item-action">
+                    Option 2
+                </p>
+                <p class="list-group-item list-group-item-action">
+                    Option 3
+                </p>
+                <p class="list-group-item list-group-item-action">
+                    Option 4
+                </p>
+                <p class="list-group-item list-group-item-action">
+                    Option 5
+                </p>
+                <p class="list-group-item list-group-item-action">
+                    Option 6
+                </p>
+            </div>
+
+
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="submit-button" align="center">
+        <button type="submit" [disabled]="false" class="btn btn-lg  btn-info">I'm done</button>
+    </div>
+
+</div>

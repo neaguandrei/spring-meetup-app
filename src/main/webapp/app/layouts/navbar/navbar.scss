@@ -1,0 +1,50 @@
+@import '~bootstrap/scss/functions';
+@import '~bootswatch/dist/materia/variables';
+@import '~bootstrap/scss/variables';
+
+/* ==========================================================================
+Navbar
+========================================================================== */
+.profile-image {
+  height: 1.75em;
+  width: 1.75em;
+}
+
+.navbar {
+  padding: 0.2rem 1rem;
+  .dropdown-item.active,
+  .dropdown-item.active:focus,
+  .dropdown-item.active:hover {
+    background-color: $dark;
+  }
+
+  ul.navbar-nav {
+    .nav-item {
+      margin-left: 0.5em;
+    }
+  }
+
+  a.nav-link {
+    font-weight: 400;
+  }
+
+  .navbar-toggler {
+    &:hover {
+      color: $navbar-dark-hover-color;
+    }
+  }
+}
+
+/* ==========================================================================
+Logo styles
+========================================================================== */
+
+
+.title-navbar {
+  font-size: initial;
+}
+
+.navbar-background {
+  background-color: whitesmoke;
+  border-bottom: 1px solid whitesmoke;
+}

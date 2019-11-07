@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="autoIncrement" value="true"/>
+
+    <changeSet id="20190730161501" author="jhipster">
+        <createTable tableName="user_challenge">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="user_id" type="bigint">
+                <constraints nullable="false" />
+            </column>
+            <column name="challenge_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="invitation_id" type="bigint"/>
+            <column name="status" type="varchar(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="points" type="double">
+                <constraints nullable="false"/>
+            </column>
+            <column name="start_time" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="end_time" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet author="iuliana" id="20190730161502">
+        <addColumn tableName="user_challenge">
+            <column name="challenge_answer_id" type="bigint"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet author="iuliana" id="20190730161503">
+        <addForeignKeyConstraint baseColumnNames="challenge_answer_id"
+                                 baseTableName="user_challenge"
+                                 constraintName="fk_challenge_answer"
+                                 referencedColumnNames="id"
+                                 referencedTableName="challenge_answer"/>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="autoIncrement" value="true"/>
+
+    <!--
+        JHipster core tables.
+        The initial schema has the '00000000000001' id, so that it is over-written if we re-generate it.
+    -->
+
+    <changeSet author="echipa1" id="20190723204201">
+<!--        <addColumn-->
+<!--                schemaName="academyProject"-->
+<!--                tableName="jhi_user">-->
+<!--            <column name="photo" type="blob"/>-->
+<!--        </addColumn>-->
+
+<!--        <addColumn-->
+<!--                schemaName="academyProject"-->
+<!--                tableName="jhi_user">-->
+<!--            <column name="date_of_birth" type="date"/>-->
+<!--        </addColumn>-->
+
+
+
+    </changeSet>
+
+</databaseChangeLog>

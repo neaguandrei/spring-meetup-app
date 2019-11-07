@@ -1,0 +1,14 @@
+<div class="main__content">
+    <div [ngClass]="{'sidebar__width': !expandedMenu, 'sidebar__width-expanded': expandedMenu}">
+        <jhi-sidebar (isMenuExpanded)="isMenuExpaned($event)"></jhi-sidebar>
+    </div>
+    <div [ngClass]="{'content__width': !expandedMenu, 'content__width-expanded': expandedMenu}">
+        <router-outlet></router-outlet>
+        <router-outlet name="popup"></router-outlet>
+    </div>
+</div>
+<!--<div>-->
+    <!--<jhi-footer></jhi-footer>-->
+<!--</div>-->
+
+

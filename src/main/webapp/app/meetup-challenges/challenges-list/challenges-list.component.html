@@ -1,0 +1,66 @@
+<div id="challengesList" class="challenges-list__content">
+
+    <div class="challenges-list__tabs">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" [ngClass]="{'active':isFutureChallengesActive}" data-toggle="tab"
+                   (click)="setTabFutureChallenges()">Future challenges</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [ngClass]="{'active': isMyChallengesActive}" data-toggle="tab"
+                   (click)="setTabMyChallenges()">My challenges</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [ngClass]="{'active':isPendingActive}" data-toggle="tab"
+                   (click)="setTabPendingChallenges()">Pending challenges</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <table id="events" class="table table-hover">
+        <thead>
+        <tr align="center" jhiSort [(predicate)]="predicate" [(ascending)]="reverse">
+            <th jhiSortBy="id" scope="col">Id
+                <fa-icon [icon]="'sort'"></fa-icon>
+            </th>
+            <th jhiSortBy="name" scope="col">Name
+                <fa-icon [icon]="'sort'"></fa-icon>
+            </th>
+            <th jhiSortBy="startDate" scope="col">Start date
+                <fa-icon [icon]="'sort'"></fa-icon>
+            </th>
+            <th jhiSortBy="endDate" scope="col">End date
+                <fa-icon [icon]="'sort'"></fa-icon>
+            </th>
+            <th jhiSortBy="category.name" scope="col">Category
+                <fa-icon [icon]="'sort'"></fa-icon>
+            </th>
+        </tr>
+        </thead>
+        <tr align="center" class="table-light" *ngFor="let challenge of challenges"
+            (click)="onChallengeClick(challenge)">
+            <td>{{challenge.id}}</td>
+            <td>{{challenge.name}}</td>
+            <td>{{challenge.startDate}}</td>
+            <td>{{challenge.endDate}}</td>
+            <td>{{challenge.challengeCategory.name}}</td>
+        </tr>
+    </table>
+
+
+    <div>
+        <a routerLink="/add" class="float circle-margin--first">
+            <i class="fa fa-plus my-float"></i>
+        </a>
+
+        <a href="#" class="float circle-margin--second" (click)="deleteChallenge()">
+            <i class="fa fa-trash my-float"></i>
+        </a>
+
+        <a href="#" class="float" (click)="goToEdit()">
+            <i class="fa fa-pencil my-float"></i>
+        </a>
+    </div>
+
+</div>

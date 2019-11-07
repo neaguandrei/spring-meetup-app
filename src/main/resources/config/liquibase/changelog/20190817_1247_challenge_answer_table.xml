@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="autoIncrement" value="true"/>
+
+    <!--
+        JHipster core tables.
+        The initial schema has the '00000000000001' id, so that it is over-written if we re-generate it.
+    -->
+    <changeSet id="20190817124701" author="iuliana">
+        <createTable tableName="challenge_answer">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="video_at" type="varchar(150)"/>
+            <column name="image_path" type="varchar(150)"/>
+            <column name="answer" type="varchar(150)"/>
+        </createTable>
+
+    </changeSet>
+    
+    <changeSet id="20190917172502" author="alexandru">
+       <loadData tableName="challenge_answer"
+                 file="config/liquibase/data/challenge_answer.csv"
+                 separator=";"
+                 encoding="UTF-8"
+                 schemaName="academyproject"
+       >
+           <column name="video_at" type="STRING"/>
+           <column name="image_path" type="STRING"/>
+           <column name="answer" type="STRING"/>
+       </loadData>
+    </changeSet>
+
+    <changeSet id="20190910113702" author="iuliana">
+        <dropColumn columnName="image_path"
+                    tableName="challenge_answer"/>
+        <addColumn tableName="challenge_answer">
+            <column name="image" type="longblob"/>
+        </addColumn>
+    </changeSet>
+
+</databaseChangeLog>

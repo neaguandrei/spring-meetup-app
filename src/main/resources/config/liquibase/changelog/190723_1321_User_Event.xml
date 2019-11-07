@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <property name="autoIncrement" value="true"/>
+    <changeSet id="190723132101" author="teodora">
+        <createTable tableName="User_Event">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="user_id" type="bigint">
+            </column>
+            <column name="event_id" type="bigint">
+            </column>
+
+
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="User_Event"
+                                 constraintName="fk_userId"
+                                 referencedColumnNames="id"
+                                 referencedTableName="jhi_user"/>
+        <addForeignKeyConstraint baseColumnNames="event_id"
+                                 baseTableName="User_Event"
+                                 constraintName="fk_eventId"
+                                 referencedColumnNames="id"
+                                 referencedTableName="event"/>
+
+
+    </changeSet>
+</databaseChangeLog>

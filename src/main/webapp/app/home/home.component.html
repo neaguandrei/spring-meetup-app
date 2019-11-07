@@ -1,0 +1,47 @@
+<div class="card main-background">
+<div class="jh-card low-opacity">
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="display-4" align="center">Welcome to our meetup website!</h1>
+        <p class="lead subtitle" align="center">the place where you can meet and greet with your peers</p>
+
+        <div *ngIf="!isAuthenticated()">
+            <jhi-switch [labelMessage]="labelMessage"
+                        (onCheck)="additionalInfoShown=!additionalInfoShown"></jhi-switch>
+        </div>
+
+        <div class="alert alert-success info-background" *ngIf="isAuthenticated()">
+            <span id="home-logged-message" *ngIf="account"> You are logged in as user "{{account.login}}". </span>
+        </div>
+
+
+        <div *ngIf="additionalInfoShown">
+            <div class="row">
+                <div class="col-md 6">
+                    <div class="card jh-card info-background-blue">
+                        <div class="alert">
+                            More and more and more and more info
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card jh-card info-background-blue">
+                        <div class="alert">
+                            <span>If you want to </span>
+                            <a class="alert-link" (click)="login()">sign in</a><span>, you can try the default accounts:<br/>- Administrator (login="admin" and password="admin") <br/>- User (login="user" and password="user").</span>
+                        </div>
+                        <div class="alert">
+                            <span>You don't have an account yet?</span>&nbsp;
+                            <a class="alert-link" routerLink="register">Register a new account</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</div>
+</div>

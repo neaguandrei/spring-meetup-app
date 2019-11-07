@@ -1,0 +1,24 @@
+@import '../../../../content/scss/_bootstrap-variables.scss';
+
+.form-styling {
+  width: 80%;
+  padding-left: 15px;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255);
+}
+
+label {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  color: $blue_background;
+  display: block;
+}
+
+.margin-40 {
+  margin-top: 40px;
+}

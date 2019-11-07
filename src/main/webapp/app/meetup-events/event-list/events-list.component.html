@@ -1,0 +1,34 @@
+<div id="eventsList" class="events-list__content">
+
+    <div class="events-list__tabs">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" [ngClass]="{'active':isFutureEventsActive}" data-toggle="tab" (click)="setTabFutureEvents()">Future events</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [ngClass]="{'active': isMyEventsActive}" data-toggle="tab" (click)="setTabMyEvents()">My events</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [ngClass]="{'active':isGetPendingActive}" data-toggle="tab" (click)="setTabPendingEvents()">Pending events</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <table id="events" class="table table-hover">
+        <thead>
+        <tr align="center">
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Start date</th>
+            <th scope="col">End date</th>
+        </tr>
+        </thead>
+        <tr align="center" class="table-light" *ngFor="let event of events" (click)="onEventClick(event)">
+            <td>{{event.id}}</td>
+            <td>{{event.name}}</td>
+            <td>{{event.startDate}}</td>
+            <td>{{event.endDate}}</td>
+        </tr>
+    </table>
+</div>

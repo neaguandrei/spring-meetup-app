@@ -1,0 +1,6 @@
+.idea/
+node/
+node_modules/
+.idea/library/
+.idea/libraries/
+target/

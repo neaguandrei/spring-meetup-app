@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+    <property name="now" value="now()" dbms="mysql"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql, mariadb"/>
+    <property name="clobType" value="clob" dbms="h2"/>
+    <property name="clobType" value="clob" dbms="mysql, oracle, mssql, mariadb, postgresql"/>
+    <property name="uuidType" value="varchar(36)" dbms="h2, mysql, mariadb"/>
+
+    <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/190721_1932_address.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/190721_2149_group.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/190723_1927_role.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/190723_2000_category.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/190723_2000_user.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/190730_1941_group_user_role.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190817_1247_challenge_answer_table.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190730161501_user_challenge.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/190716_1127_event.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190713_0003_invitation_table.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190720234201_interest_table.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/190723_1321_User_Event.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/190730_1500_user_interest.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190808_1909_challenge_category_table.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190730162701_challenge_table.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/190821_1322_Event_Category.xml" relativeToChangelogFile="false"/>
+
+
+    <include file="config/liquibase/changelog/190806_1853_age_intervals.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/190806_1925_user_statistics.xml" relativeToChangelogFile="false"/>
+
+    <include file="config/liquibase/changelog/20190820_1401_change_group.xml" relativeToChangelogFile="false"/>
+
+
+
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+</databaseChangeLog>

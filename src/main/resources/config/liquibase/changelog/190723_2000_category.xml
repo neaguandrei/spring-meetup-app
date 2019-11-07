@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <property name="autoIncrement" value="true"/>
+
+    <!--
+        JHipster core tables.
+        The initial schema has the '00000000000001' id, so that it is over-written if we re-generate it.
+    -->
+    <changeSet id="20190723200001" author="echipa1">
+        <createTable tableName="Category">
+            <column name="category_id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(100)">
+                <constraints unique="true" nullable="false" uniqueConstraintName="unique_category"/>
+            </column>
+            <column name="description" type="varchar(300)"/>
+
+        </createTable>
+
+    </changeSet>
+
+
+    <changeSet id="10292008193502" author="bianca">
+        <renameColumn tableName="Category" oldColumnName="category_id" newColumnName="id" columnDataType="bigint"></renameColumn>
+    </changeSet>
+
+    <changeSet id="10292008193503" author="teodora">
+
+        <addAutoIncrement columnDataType="bigint"
+                          columnName="id"
+                          incrementBy="1"
+                          tableName="Category"/>
+
+    </changeSet>
+    <changeSet id="10292008193504" author="teodora">
+        <loadData
+                file="config/liquibase/data/category.csv"
+                separator=";"
+                tableName="Category"/>
+    </changeSet>
+
+</databaseChangeLog>
